@@ -53,13 +53,26 @@
         <img src="paneer-pizza.jpg" class="card-image">
         <h1 class="card-heading">Chees Paneer Pizza</h1>
         <div class="btn-container">
-            <button class="btn">-</button>
+            <button class="btn" onclick="decrement()">-</button>
             <span id="quantity">1</span>
-            <button class="btn">+</button>
+            <button class="btn" onclick="increment()">+</button>
         </div>
         <p class="paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, doloribus inci.
         </p>
     </div>
+
+    <script>
+        function increment(){
+            const quantityElement = document.getElementById("quantity");
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity+1;
+        }
+        function decrement(){
+            const quantityElement = document.getElementById("quantity");
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity-1;
+        }
+    </script>
 </body>
 </html>
