@@ -77,7 +77,9 @@
         function decrement(){
             const quantityElement = document.getElementById("quantity");
             const quantity = parseInt(quantityElement.innerText);
+            if(quantity>1){
             quantityElement.innerText = quantity-1;
+            }
         }
     </script>
 </body>
